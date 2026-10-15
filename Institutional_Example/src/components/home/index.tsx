@@ -2,49 +2,48 @@ const navItems = ['Início', 'Sobre', 'Serviços', 'Contato']
 
 const advantages = [
   {
-    title: 'Planejamento',
+    title: 'Plano individualizado',
     icon: 'plan',
   },
   {
-    title: 'Qualidade',
+    title: 'Cuidado acolhedor',
     icon: 'shield',
   },
   {
-    title: 'Compromisso',
-    icon: 'handshake',
+    title: 'Evolução acompanhada',
+    icon: 'heart',
   },
 ]
 
 const serviceCards = [
   {
     id: '01',
-    title: 'Construção residencial',
-    description: 'Do planejamento à entrega do seu novo lar.',
-    bullets: ['Planejamento da obra', 'Execução por etapas', 'Acompanhamento técnico'],
-    icon: 'house',
+    title: 'Fisioterapia ortopédica',
+    description: 'Atenção especializada para dores e limitações do movimento.',
+    bullets: ['Avaliação funcional', 'Exercícios terapêuticos', 'Acompanhamento individual'],
+    icon: 'movement',
   },
   {
     id: '02',
-    title: 'Reformas',
-    description: 'Mais conforto e funcionalidade para seu espaço.',
-    bullets: ['Renovação de ambientes', 'Melhor uso dos espaços', 'Atenção aos acabamentos'],
-    icon: 'wrench',
+    title: 'Reabilitação',
+    description: 'Suporte para retomar atividades com mais confiança e segurança.',
+    bullets: ['Recuperação pós-lesão', 'Mobilidade e força', 'Plano conforme seus objetivos'],
+    icon: 'recovery',
   },
   {
     id: '03',
-    title: 'Gestão de obras',
-    description: 'Organização e clareza em cada fase do projeto.',
-    bullets: ['Controle de prazos', 'Organização de custos', 'Coordenação da execução'],
-    icon: 'checklist',
+    title: 'Prevenção e movimento',
+    description: 'Cuidados para manter o corpo ativo no dia a dia e no esporte.',
+    bullets: ['Orientação de exercícios', 'Consciência corporal', 'Hábitos de movimento'],
+    icon: 'plan',
   },
 ]
 
-function HouseIcon({ className = '' }: { className?: string }) {
+function ClinicIcon({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M3 10.5 12 3l9 7.5" />
-      <path d="M5 9.5v10.5h14V9.5" />
-      <path d="M9 20v-6h6v6" />
+      <path d="M12 21s-8-4.7-8-11a4.5 4.5 0 0 1 8-2.9A4.5 4.5 0 0 1 20 10c0 6.3-8 11-8 11Z" />
+      <path d="M7.5 12h3l1.5-3 2 6 1.5-3h1" />
     </svg>
   )
 }
@@ -67,33 +66,29 @@ function ShieldIcon({ className = '' }: { className?: string }) {
   )
 }
 
-function HandshakeIcon({ className = '' }: { className?: string }) {
+function HeartIcon({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M7 10.5 4.5 13l5.5 5.5 6.5-6.5 3.5 3.5L10.5 22 4 15.5l3-5Z" />
-      <path d="M13 9.5 9 5.5l2-2 7 7-2 2-1.5-1.5" />
-      <path d="M8.5 9.5 5 13" />
-      <path d="M18 7.5l-3.5 3.5" />
+      <path d="M20.8 8.8c0 5.2-8.8 10.2-8.8 10.2S3.2 14 3.2 8.8A4.8 4.8 0 0 1 12 6.1a4.8 4.8 0 0 1 8.8 2.7Z" />
     </svg>
   )
 }
 
-function WrenchIcon({ className = '' }: { className?: string }) {
+function MovementIcon({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M14.2 7.5a4.2 4.2 0 0 1 5.8 6.1l-2.8 2.8-1.5-1.5 2.8-2.8a2.6 2.6 0 0 0-3.5-3.5L11 10.4l-1.5-1.5 2.1-2.1a4.2 4.2 0 0 1 2.6-1.3Z" />
-      <path d="M8.4 15.6 4 20l-1.5-1.5L6.9 14l1.5 1.5Z" />
-      <path d="M4 6.5 6.5 4" />
+      <circle cx="12" cy="4.5" r="2" />
+      <path d="m10.5 9 2.5 2 3.5-1M10.5 9 8 13l-3 1M13 11l-1 4 3 3M12 15l-4 4" />
     </svg>
   )
 }
 
-function ChecklistIcon({ className = '' }: { className?: string }) {
+function RecoveryIcon({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M8 4.75h10.5A1.75 1.75 0 0 1 20.25 6.5v10.5A1.75 1.75 0 0 1 18.5 18.75H8" />
-      <path d="M8 4.75v14.5M5.5 7.25h.01M5.5 11.75h.01M5.5 16.25h.01" />
-      <path d="m9.5 9.5 1.5 1.5 3-3" />
+      <path d="M20 11a8 8 0 0 0-14.8-4L3 10" />
+      <path d="M3 5v5h5M4 13a8 8 0 0 0 14.8 4L21 14" />
+      <path d="M21 19v-5h-5" />
     </svg>
   )
 }
@@ -146,9 +141,9 @@ function Home() {
         <header className="flex items-center justify-between gap-4 border-b border-[#0d3d36]/10 pb-5">
           <div className="flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-md bg-[#f7f3ef] text-[#0d3d36] shadow-[inset_0_0_0_1px_rgba(13,61,54,0.12)]">
-              <HouseIcon className="h-4 w-4" />
+              <ClinicIcon className="h-4 w-4" />
             </div>
-            <span className="font-secondary text-[1.7rem] leading-none text-[#0d3d36]">Norte Construções</span>
+            <span className="font-secondary text-[1.7rem] leading-none text-[#0d3d36]">Viva Movimento</span>
           </div>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -165,7 +160,7 @@ function Home() {
           </nav>
 
           <button className="inline-flex items-center gap-2 rounded-xl bg-[#0d3d36] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(13,61,54,0.18)] transition hover:bg-[#0c322f]">
-            Solicitar orçamento
+            Agendar avaliação
             <SendArrowIcon className="h-4 w-4" />
           </button>
         </header>
@@ -174,25 +169,25 @@ function Home() {
           <section className="grid items-center gap-8 py-10 md:grid-cols-[1.05fr_1.15fr] md:py-12">
             <div className="max-w-135">
               <h1 className="font-secondary text-[4.2rem] leading-[0.9] tracking-[-0.06em] text-[#0f2b2b] md:text-[5rem]">
-                Confiança para
+                Mais movimento,
                 <br />
-                cada novo começo
+                mais bem-estar
               </h1>
 
               <p className="mt-6 max-w-107.5 text-[1.05rem] leading-8 text-[#496564]">
-                Construção e reforma com qualidade, planejamento e atenção aos detalhes.
+                Fisioterapia com cuidado individualizado para você se movimentar melhor e viver com mais bem-estar.
               </p>
 
               <button className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#0d3d36] px-5 py-3.5 text-base font-semibold text-white shadow-[0_10px_18px_rgba(13,61,54,0.16)] transition hover:bg-[#0b322e]">
-                Solicitar orçamento
+                Agendar avaliação
                 <SendArrowIcon className="h-4 w-4" />
               </button>
             </div>
 
             <div className="overflow-hidden rounded-[28px] border border-[#d9d1ca] bg-[#d9d1ca] shadow-[0_26px_48px_rgba(42,29,20,0.12)]">
               <img
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
-                alt="Casa moderna com jardim"
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80"
+                alt="Profissional de saúde conversando com uma paciente"
                 className="h-125 w-full object-cover"
               />
             </div>
@@ -205,7 +200,7 @@ function Home() {
                   ? PlanIcon
                   : icon === 'shield'
                     ? ShieldIcon
-                    : HandshakeIcon
+                    : HeartIcon
 
               return (
                 <div
@@ -228,16 +223,16 @@ function Home() {
             </div>
 
             <h2 className="font-secondary text-[3.6rem] leading-none tracking-[-0.06em] text-[#0f2b2b] md:text-[4rem]">
-              Da ideia à realização
+              Cuidado que acompanha você
             </h2>
 
             <p className="mt-4 max-w-205 text-[1.02rem] leading-8 text-[#496564]">
-              Soluções completas em construção e reforma, com planejamento, qualidade e foco em cada detalhe do seu projeto.
+              Cada pessoa tem uma história e objetivos diferentes. Por isso, começamos com uma avaliação e construímos o cuidado junto com você.
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {serviceCards.map(({ id, title, description, bullets, icon }) => {
-                const Icon = icon === 'house' ? HouseIcon : icon === 'wrench' ? WrenchIcon : ChecklistIcon
+                const Icon = icon === 'movement' ? MovementIcon : icon === 'recovery' ? RecoveryIcon : PlanIcon
 
                 return (
                   <article
@@ -282,8 +277,8 @@ function Home() {
           <section className="mt-20 grid items-center gap-8 rounded-[28px] border border-[#d9d1ca] bg-[#f7f3ef] p-4 md:grid-cols-[1.1fr_1fr] md:p-0">
             <div className="overflow-hidden rounded-[22px] bg-[#d8d0c8]">
               <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
-                alt="Varanda com área gourmet"
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80"
+                alt="Pessoa realizando exercício com acompanhamento profissional"
                 className="h-105 w-full object-cover"
               />
             </div>
@@ -295,15 +290,15 @@ function Home() {
               </div>
 
               <h2 className="font-secondary text-[3.7rem] leading-[0.95] tracking-[-0.06em] text-[#0f2b2b]">
-                Seu projeto em boas mãos
+                Movimento com atenção e propósito
               </h2>
 
               <p className="mt-5 max-w-130 text-[1.05rem] leading-8 text-[#496564]">
-                A Norte Construções é especializada em construção e reforma, unindo experiência, planejamento e atenção aos detalhes para entregar resultados que valorizam o seu patrimônio.
+                Na Viva Movimento, cada atendimento começa com escuta, avaliação e objetivos definidos em conjunto. Nossa equipe acompanha seu processo com atenção em cada etapa.
               </p>
 
               <button className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#0d3d36] px-5 py-3.5 text-base font-semibold text-white shadow-[0_10px_18px_rgba(13,61,54,0.16)] transition hover:bg-[#0b322e]">
-                Conheça a nossa história
+                Conheça a clínica
                 <SendArrowIcon className="h-4 w-4" />
               </button>
             </div>
@@ -312,17 +307,17 @@ function Home() {
           <section className="mt-20 rounded-[22px] bg-[#0d3d36] px-6 py-7 text-white shadow-[0_25px_42px_rgba(10,42,38,0.16)] md:px-10 md:py-8">
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <h2 className="max-w-155 font-secondary text-[2.8rem] leading-[0.95] tracking-tighter text-white md:text-[3.3rem]">
-                Vamos construir seu próximo passo?
+                Vamos dar o próximo passo juntos?
               </h2>
 
               <button className="inline-flex items-center justify-center gap-2 self-start rounded-xl bg-white px-5 py-3 text-base font-semibold text-[#0d3d36] transition hover:bg-[#edf3f1]">
-                Fale com a gente
+                Agende sua avaliação
                 <SendArrowIcon className="h-4 w-4" />
               </button>
             </div>
 
             <p className="mt-3 max-w-155 text-[1.05rem] leading-7 text-[#dce8e7]">
-              Fale com a nossa equipe e receba um orçamento personalizado para o seu projeto.
+              Conte para nós o que você precisa. Nossa equipe está pronta para orientar você sobre o melhor caminho para começar.
             </p>
           </section>
         </main>
@@ -331,9 +326,9 @@ function Home() {
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-3">
               <div className="flex h-8 w-8 items-center justify-center rounded-md bg-[#f7f3ef] text-[#0d3d36] shadow-[inset_0_0_0_1px_rgba(13,61,54,0.12)]">
-                <HouseIcon className="h-4 w-4" />
+                <ClinicIcon className="h-4 w-4" />
               </div>
-              <span className="font-secondary text-[1.7rem] leading-none text-[#0d3d36]">Norte Construções</span>
+              <span className="font-secondary text-[1.7rem] leading-none text-[#0d3d36]">Viva Movimento</span>
             </div>
 
             <nav className="flex flex-wrap items-center gap-5 text-sm text-[#23463f] md:justify-center">
@@ -352,7 +347,7 @@ function Home() {
           </div>
 
           <div className="mt-6 flex flex-col gap-2 text-sm text-[#59706d] md:flex-row md:items-center md:justify-between">
-            <span>© 2026 Norte Construções. Todos os direitos reservados.</span>
+            <span>© 2026 Viva Movimento. Todos os direitos reservados.</span>
             <div className="flex items-center gap-5">
               <a href="#" className="hover:text-[#0d3d36]">Política de Privacidade</a>
               <a href="#" className="hover:text-[#0d3d36]">Termos de Uso</a>
